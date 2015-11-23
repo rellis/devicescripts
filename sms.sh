@@ -25,11 +25,6 @@ adb shell am start -a android.intent.action.SENDTO -d sms:"$tn"
 adb shell input text WV82GM268J0MsM6hbLZ1xQMqPF9t3In1EoHju4bTuBbPfqVG6q8Yr27twCUDpUXZKpjyJbCp8TrcbZNussVsnByp7FCtLwctqt0s2AWYRgFqnPxnIXT33keEkmi7gfF2skA8VhzYeKRFKTAmqN6IDJXAiaOhx2Sm
 adb shell input keyevent 66
 sleep 5s
-echo "Running Pipe char sms test..."
-adb shell am start -a android.intent.action.SENDTO -d sms:"$tn"
-adb shell input text |WV82GM268J0MsM6hbLZ1xQMqPF9t3In1E||oHju4bTuBbPfqVG6q8Yr27twCUDpU|XZKpjyJbCp8TrcbZNussVsnByp7FCtLwctqt0s2AWYRgFqnPxnIXT33keEkmi7gfF2skA8VhzYeKRFKTAmqN6IDJXAiaOhx2Sm 
-adb shell input keyevent 66
-sleep 5s
 echo "Now turning wifi off, turning cell data off and running same test in same order..."
 adb shell svc wifi disable
 adb shell svc data disable
@@ -53,11 +48,6 @@ adb shell input keyevent 66
 echo "Running 160 char sms test..."
 adb shell am start -a android.intent.action.SENDTO -d sms:"$tn"
 adb shell input text WV82GM268J0MsM6hbLZ1xQMqPF9t3In1EoHju4bTuBbPfqVG6q8Yr27twCUDpUXZKpjyJbCp8TrcbZNussVsnByp7FCtLwctqt0s2AWYRgFqnPxnIXT33keEkmi7gfF2skA8VhzYeKRFKTAmqN6IDJXAiaOhx2Sm
-adb shell input keyevent 66
-sleep 5s
-echo "Running Pipe char sms test..."
-adb shell am start -a android.intent.action.SENDTO -d sms:"$tn"
-adb shell input text |WV82GM268J0MsM6hbLZ1xQMqPF9t3In1E||oHju4bTuBbPfqVG6q8Yr27twCUDpU|XZKpjyJbCp8TrcbZNussVsnByp7FCtLwctqt0s2AWYRgFqnPxnIXT33keEkmi7gfF2skA8VhzYeKRFKTAmqN6IDJXAiaOhx2Sm
 adb shell input keyevent 66
 sleep 5s
 echo "Waiting 30 seconds to give legacy sms time to send."
